@@ -1,0 +1,18 @@
+
+FILE(GLOB sources *.cc)
+FILE(GLOB prms RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}/" *.prm)
+GET_FILENAME_COMPONENT(prefix ${CMAKE_CURRENT_SOURCE_DIR} NAME)
+
+FOREACH(ccfile ${sources})
+  GET_FILENAME_COMPONENT(file ${ccfile} NAME_WE)
+  SET(target ${prefix}_${file})
+  ADD_EXECUTABLE(${target} ${ccfile} parameters.h)
+  SET_TARGET_PROPERTIES(${target} PROPERTIES OUTPUT_NAME ${file})
+  DEAL_II_SETUP_TARGET(${target})
+  TARGET_LINK_LIBRARIES(${target} amandus)
+ENDFOREACH()
+
+FOREACH(file ${prms})
+  CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/${file}
+    ${CMAKE_CURRENT_BINARY_DIR}/${file} COPYONLY)
+ENDFOREACH()
