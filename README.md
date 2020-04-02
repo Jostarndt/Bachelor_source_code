@@ -1,5 +1,5 @@
-# Bachelor_source_code
-This is the source code of a reaction-diffusion differential equation, coded in c++ using amandus  ( https://bitbucket.org/guidokanschat/amandus/src/master/ ) and deal.II ( https://www.dealii.org/ )
+# Finite Element Solver of a Reaction-Diffusion differential equation
+This is the source code of a reaction-diffusion differential equation, coded in c++ using amandus  ( https://bitbucket.org/guidokanschat/amandus/src/master/ ) and deal.II ( https://www.dealii.org/ ). It uses the discontinuous Galerkin Finite Element Method together with the Rothe-Method and Crank-Nicolson. Furthermore the equations are solved with the use of a solver using the GMRES-Method.
 
 For the actual equation, specific coefficients and further questions please do not hesitate to contact me.
 
