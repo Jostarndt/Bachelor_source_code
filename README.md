@@ -6,8 +6,8 @@ The outpuut of the compiled program depends dynamically on the parameter files a
 
 Here are some examples of one reactant starting randomly distributed in some area resulting in a steady-state pattern. The visualitation is done with the use of VisIT.
 Initial state:
-![First]("theta0_5gamma1000zeit0balken.png")
+![Initial State]("theta0_5gamma1000zeit0balken.png")
 After 30 timesteps:
-![First]("theta0_5gamma1000zeit30balken.png")
+![30 timesteps]("theta0_5gamma1000zeit30balken.png")
 After 300 timesteps:
-![First]("theta0_5gamma1000zeit300balken.png")
+![300 timesteps]("theta0_5gamma1000zeit300balken.png")
